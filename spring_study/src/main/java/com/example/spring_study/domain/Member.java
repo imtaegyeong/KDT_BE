@@ -1,22 +1,29 @@
 package com.example.spring_study.domain;
 
+import com.sun.istack.NotNull;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
+
+@Entity
+@Getter
+@Setter
 public class Member {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
+
+  @Column(name = "name", length = 10, nullable = false)
+  @NotNull
   private String name;
+  @Column(name = "login_id", length = 10, nullable = false)
+  @NotNull
+  private String loginId;
 
-  public Long getId() {
-    return id;
-  }
+  @Column(name = "password", length = 12, nullable = false)
+  @NotNull
+  private String password;
 
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
 }

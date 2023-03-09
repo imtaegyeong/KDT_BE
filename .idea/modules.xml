@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/KDT_BE.iml" filepath="$PROJECT_DIR$/.idea/KDT_BE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Test1/Test1.iml" filepath="$PROJECT_DIR$/Test1/Test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NewPage/Test1 (1).iml" filepath="$PROJECT_DIR$/NewPage/Test1 (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring/jsp_sample/jsp_sample.iml" filepath="$PROJECT_DIR$/spring/jsp_sample/jsp_sample.iml" />
     </modules>
   </component>
 </project>
