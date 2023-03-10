@@ -31,26 +31,9 @@ public class MemberController {
     @PostMapping("/join")
     public String memberJoin(@ModelAttribute Member member) {
         memberService.join(member);
-        return "redirect:/";
+        return "redirect:/login";
     }
 
-    @GetMapping("/login")
-    public String memberLogin(Model model){
-        Member member =new Member();
-        model.addAttribute("Member", member);
-        return "members/login";
-    }
 
-    @PostMapping("/login")
-    public String memberLogin(@ModelAttribute Member member){
-        Optional<Member> member1 = memberService.findMember(member.getLoginId());
-        //        String pw = memberService.findMember(member.getLoginId()).get().getPassword();
-        // empty 체크 안하면 no such Element Exception 발생
-        if( !member1.isEmpty() && member1.get().getPassword().equals(member.getPassword())) {
-            return "basic/items";
-        }
-        return "redirect:/members/login";
-
-    }
 
 }

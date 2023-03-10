@@ -1,0 +1,4 @@
+# Project exclude paths
+/NewPage/target/
+/spring/jsp_sample/target/
+/Test1/target/
