@@ -6,7 +6,12 @@
 </head>
 <body>
 <div><h1>로그인</h1></div>
-<form action="/login" method="post" th:object="${Member}">
+
+//액션이 비어 있으면 get으로 들어온 url과 동일하게 post를 전달한다
+// ?=부분이 있어도 액션이 login이라서 강제로 login으로 이동함.
+//action 뒤의 login 제거
+
+<form th:action method="post" th:object="${Member}">
     <div>
         <label for="loginId">로그인 ID</label>
         <input type="text" id="loginId" th:field="*{loginId}" placeholder="아이디를 입력해주세요"></input>

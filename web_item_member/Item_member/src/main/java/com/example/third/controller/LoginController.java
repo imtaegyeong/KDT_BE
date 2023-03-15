@@ -48,7 +48,7 @@ public class LoginController {
       memberSession.setLoginId(loginMember.getLoginId());
       memberSession.setName(loginMember.getName());
 
-      HttpSession session = request.getSession();// true : if null -> create
+      HttpSession session = request.getSession(true);// true : if null -> create
       session.setAttribute(SessionConst.NAME, memberSession);
 
 //      Cookie memberId = new Cookie(CookieConst.NAME, String.valueOf(member1.get().getId()));
